@@ -6,7 +6,7 @@
             </div>
             <div class="col">
             <a href="{{route('home')}}">Home</a>
-            <a href="{{route('authors')}}">Characters</a>
+            <a href="{{route('authors')}}">Authors</a>
             </div>
 
         </div>
