@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
+
+Route::get('/', function () {
+    $fumetti = config('comics');
+    //dd($fumetti);
+    return view('home', compact ('fumetti'));
+})->name('home');
+
