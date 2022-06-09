@@ -23,3 +23,8 @@ Route::get('/', function () {
     return view('home', compact ('fumetti'));
 })->name('home');
 
+Route::get('/authors', function () {
+    $fumetti = config('comics');
+    //dd($fumetti);
+    return view('authors', compact ('fumetti'));
+})->name('authors');

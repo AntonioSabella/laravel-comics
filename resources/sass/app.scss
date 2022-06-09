@@ -1,1 +1,31 @@
  @use 'bootstrap';
+
+ /* Commons */
+
+ header {
+     background-color: cornflowerblue;
+     height: 150px;
+    }
+
+ footer {
+     background-color: palegreen;
+     height: 150px;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ #site_main {
+     padding-top: 3rem;
+ }
+
+ span {
+     font-size: 13px;
+ }
+
+ /* Utilities */
+
+ .fixed_height {
+     height: 550px;
+ }
