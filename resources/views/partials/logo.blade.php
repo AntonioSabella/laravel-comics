@@ -1,0 +1,1 @@
+<img height="60" src="{{asset('img/dc-logo.png')}}" alt="">
