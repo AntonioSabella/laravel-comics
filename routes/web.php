@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 }); */
 
 Route::get('/', function () {
+    $name = Route::currentRouteName();
+    //dd($name);
     $fumetti = config('comics');
     //dd($fumetti);
     return view('home', compact ('fumetti'));
@@ -38,43 +40,75 @@ Route::get('/', function () {
 })->name('home'); */
 
 Route::get('/characters', function () {
+    $name = Route::currentRouteName();
+    //dd($name);
     return 'Characters page';
 })->name('characters');
 
 Route::get('/comics', function () {
+    $name = Route::currentRouteName();
+    //dd($name);
     $fumetti = config('comics');
 
     return view('comics', compact('fumetti'));
 })->name('comics');
 
+Route::get('/comics/{id}', function ($id) {
+    $fumetti = config('comics');
+    /* dd(count($fumetti)); */
+    if($id >= 0 && is_numeric($id) && $id < count($fumetti)) {
+        dd($id);
+    } else {
+        dd('Abort! 404');
+    }
+});
+
+
+
 Route::get('/movies', function () {
+    $name = Route::currentRouteName();
+    //dd($name);
     return 'Movies page';
 })->name('movies');
 
 Route::get('/tv', function () {
+    $name = Route::currentRouteName();
+    //dd($name);
     return 'Tv page';
 })->name('tv');
 
 Route::get('/games', function () {
+    $name = Route::currentRouteName();
+    //dd($name);
     return 'Games page';
 })->name('games');
 
 Route::get('/collectibles', function () {
+    $name = Route::currentRouteName();
+    //dd($name);
     return 'Collectibles page';
 })->name('collectibles');
 
 Route::get('/videos', function () {
+    $name = Route::currentRouteName();
+    //dd($name);
     return 'Videos page';
 })->name('videos');
 
 Route::get('/fans', function () {
     return 'Fans page';
+    $name = Route::currentRouteName();
+    //dd($name);
 })->name('fans');
 
 Route::get('/news', function () {
+    $name = Route::currentRouteName();
+    //dd($name);
     return 'News page';
 })->name('news');
 
 Route::get('/shop', function () {
+    $name = Route::currentRouteName();
+    //dd($name);
     return 'shop page';
 })->name('shop');

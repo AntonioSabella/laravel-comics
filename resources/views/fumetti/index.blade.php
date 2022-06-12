@@ -15,13 +15,15 @@
         <h1>Current Series</h1>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6">
 
-            @forelse($fumetti as $fumetto)
+            @forelse($fumetti as $index => $fumetto)
+            <a href="{{route('fumetto-singolo', $index)}}">
                 <div class="col">
                     <div class="comic">
-                        <img class="img-fluid" src="{{$fumetto['thumb']}}" alt="">
-                        <p>{{$fumetto['series']}}</p>
+                        <img class="img-fluid" src="{{$fumect['thumb']}}" alt="">
+                        <p>{{$fumect['series']}}</p>
                     </div>
                 </div>
+            </a>
             @empty
             <div class="col">Nessun risultato da mostrare</div>
             @endforelse

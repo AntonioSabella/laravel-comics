@@ -6,7 +6,32 @@ $dc-text-dark: #464646;
 $dc-text-white: #FFFFF2;
 $dc-text-grey: #797777;
 
+
+/* UTILITIES */
+
+.ms_10 {
+    margin-left: 10rem;
+}
+
+
+/* HEADER */
+
+header {
+    li{
+        a {
+            &:hover,
+            &.active {
+                border-bottom: 4px solid $dc-primary;
+                color: $dc-primary!important;
+            }
+        }
+
+    }
+ 
+}
+
 /* MAIN */
+
 
 main {
     .hero_image {
@@ -46,9 +71,75 @@ main {
 }
 
 
-/* Site Footer */
+/* FOOTER */
 #site_footer {
-    height: 400px;
-    background-image: url('../img/footer-bg.jpg');
-    background-size: cover;
+    background-image: url('../img/dc-logo-bg.png'), url('../img/footer-bg.jpg');
+    background-position: right top, left top;
+    background-size: contain, cover;
+    background-repeat: no-repeat, no-repeat;
+    .container {
+        ul {
+            list-style: none;
+            color: $dc-text-grey;
+            padding: 0;
+            li {
+                a {
+                    text-decoration: none;
+                    cursor: pointer;
+                    color: $dc-text-grey;
+                    &:hover {
+                        text-decoration: underline;
+                        color: $dc-text-white;
+                    }
+                }
+            }
+        }
+        p {
+            color: $dc-text-grey;
+            a {
+                color: dc-primary;
+            }
+        }
+    }
+
+        .footer_bottom {
+            background-color: $dc-footer-bg;
+            .signUp_banner {
+                .signUp_button {
+                    a {
+                        text-decoration: none;
+                        padding: 0.5rem 1.5rem;
+                        border: 1px solid $dc-primary;
+                        text-transform: uppercase;
+                        color: $dc-text-white;
+                        transition: 600ms;
+                        &:hover {
+                            color: $dc-banner-bg;
+                            background-color: $dc-primary;
+                            border: 1px solid $dc-text-white;
+                        }
+                    }
+                }
+                .follow_us {
+                    .follow_title{
+                        h5 {
+                            color: $dc-primary;
+                            margin: 0;
+                        }
+                    }
+                    .icons {
+                        span {
+                            border-radius: 50%;
+                            transition: 500ms;
+                            &:hover{
+                                background-color: $dc-text-white;
+                            }
+                        }
+                        
+                    }
+
+                }
+            }
+        }
+
 }
