@@ -50,20 +50,20 @@ Route::get('/comics', function () {
     //dd($name);
     $fumetti = config('comics');
 
-    return view('comics', compact('fumetti'));
-})->name('comics');
+    return view('fumetti.index', compact('fumetti'));
+})->name('fumetti.index');
 
 Route::get('/comics/{id}', function ($id) {
     $fumetti = config('comics');
     /* dd(count($fumetti)); */
     if($id >= 0 && is_numeric($id) && $id < count($fumetti)) {
-        dd($id);
+        //dd($id);
+        $fumect = $fumetti[$id];
+    return view('fumetti.show', compact('fumect'));
     } else {
-        dd('Abort! 404');
+        abort(404);
     }
-});
-
-
+})->name('fumetti.show');
 
 Route::get('/movies', function () {
     $name = Route::currentRouteName();

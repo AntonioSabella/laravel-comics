@@ -1,0 +1,31 @@
+@use 'bootstrap';
+$dc-primary: #0282F9;
+$dc-banner-bg: #1C1C1C;
+$dc-footer-bg: #303030;
+$dc-text-dark: #464646;
+$dc-text-white: #FFFFF2;
+$dc-text-grey: #797777;
+
+
+.img_card {
+    border: 1px solid $dc-text-white;
+    position: relative;
+    .comic_book {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 0.5rem;
+        background-color: $dc-primary;
+        color: $dc-text-white;
+        text-transform: uppercase;
+    }
+    .view_gallery{
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        background-color: $dc-primary;
+        color: $dc-text-white;
+        text-transform: uppercase;
+        width: 192px;
+    }
+}

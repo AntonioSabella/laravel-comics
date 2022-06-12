@@ -3,9 +3,7 @@
 @section('content')
 <main id='site_main'>
 
-<div class="hero_image">
-
-</div>
+@include('partials.jumbo')
 
 <div class="container">
     <div class="row row-cols-4 justify-content-center align-items-center">
