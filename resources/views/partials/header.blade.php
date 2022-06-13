@@ -1,4 +1,4 @@
-<header>
+<header id='site_header'>
 
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <div class="container">
@@ -17,7 +17,7 @@
                         <a class="nav-link {{ Route::currentRouteName() === 'characters' ? 'active' : '' }}" href="{{route('characters')}}">Characters</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ Route::currentRouteName() === 'fumetti.index' ? 'active' : '' }}" href="{{route('fumetti.index')}}">Comics</a>
+                        <a class="nav-link {{ Route::currentRouteName() === 'fumetti.index' || Route::currentRouteName() === 'fumetti.show' ? 'active' : '' }}" href="{{route('fumetti.index')}}">Comics</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ Route::currentRouteName() === 'movies' ? 'active' : '' }}" href="{{route('movies')}}">Movies</a>

@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('page-title', $fumect['title'])
+
+
 @section('css-head')
 <link rel="stylesheet" href="{{asset('css/show.css')}}">
 @endsection
